@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(143, 37, 241);
+    color:rgb(135, 236, 240);
+    font-family: "Karla", sans-serif;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+button {
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: solid rgb(35, 125, 204) 2px;
+    box-shadow: rgba(214, 202, 202, 0.884) 0px 2px 6px -1px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button:hover {
+    background-color: rgb(9, 252, 252);
+    color: rgb(197, 137, 253);
+    border: none;
+}
