@@ -208,3 +208,34 @@ Delimitar los metodos que necesito y dejar fuera los innecesarios
 
 /*Programa que conste de una clase llamad alumno que tenga como atributos nombre y calificación. Definir los métodos para atributos, imprimirlos y mostrar un mensaje con el resultado de si la calificación es aprobatoria o no */
 
+class Alumno {
+    constructor(nombre, calif) {
+        this.nombre = nombre;
+        this.calif = calif;
+    }
+
+    mostrarCalificacion() {
+        console.log("La calificación del alumno es: " + this.calif);
+    }
+
+    estado() {
+        let estadoAlumno = Number(this.calif) > 5.9 ? "Aprobado" : "Reprobado";
+        console.log(`El alumno ${this.nombre} está ${estadoAlumno} con una calificación de ${this.calif}`);
+    }
+}
+
+const alumnoA = new Alumno("EjemploAlumno1", 6.9);
+const alumnoB = new Alumno("EjemploAlumno2", 7);
+
+alumnoA.estado();
+alumnoB.estado();
+
+estudianteUno.evaluarEstatus();
+estudianteDos.evaluarEstatus();
+
+/*El principio SOLID son reglas para escribir un codigo más claro.
+la letra s: Responsabilidad unica
+la letra o: Abierto o cerrado
+la letra L: se refiere a la sustitución de Liskov
+la letra i: se refiere a la segregación de la interfaz
+la letra d: se refiere a la inversión de dependencia.
