@@ -37,6 +37,8 @@ description= 'Tennis dark Running'
 price= '$2296'
 />
 
+<br></br>
+<Buttons />
 
     </>
   )

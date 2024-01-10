@@ -1,18 +1,19 @@
-import "./Button.css";
+import './Button.css'
 
-/*
-Props
-Propiedades qeu se pueden asignar a los componentes para modificar el texto, la informacion desde la renderizacion del ismo.
-Se asignan dentro de la funcion con el nombre del prop y debe ir entre llaves 
-Se manda a llamar en el bloque de codigo donde se debe implementar utilizando llaves
-*/
+/**
+ * Props. Propiedades que se pueden asignar a los componentes para modificar el texto, la información desde la renderización del mismo.
+ * Se asignan como parámetro de la función con el nombre del prop y debe ir entre llaves.
+ * Se manda a llamar en el bloque de código donde se debe implementar utilizando llaves
+ */
 
-const Button = ({ texto }) => {
-  return (
-    <>
-      <button>{texto}</button>
-    </>
-  );
-};
+const Button = ({ label }) => {
+    return (
+        <>
+        <button>
+            {label}
+        </button>
+        </>
+    )
+}
 
-export default Button;
+export default Button
