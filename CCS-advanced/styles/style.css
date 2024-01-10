@@ -1,0 +1,232 @@
+:root{
+
+
+--font-primary: "Poppins", sans-serif;
+--color-primary: rgb(159, 101, 192);
+--color-secondary:#b83c99;
+--color-text:rgb(173, 67, 173);
+--color-background:#fa6cba;
+--color-light:#360642;
+--color-dark:#f75b9c;
+
+
+
+}
+
+body{
+background-color: var(--color-background);
+color: var(--color-text);
+font-family: var(--font-primary);
+}
+
+
+    .position{
+        width: 100px;
+        height:100px;
+        background-color: var(--color-dark);
+
+    }
+    /* La posición estática es la posición por default del html, no se afecta por top, bottom, left ni right */
+#static {
+    position: static;
+    top: 20px;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: var(--color-secondary);
+}
+/* Es posicionado de forma relativa al viewport y si permite movimiento mediante propiedades top, bottom, left y right */
+
+#relative {
+    position: relative;
+    top: 50px;
+    left: 200px;
+    background-color: var(--color-primary);
+    
+}
+
+/*Se posiciona de forma relativa a su ancestro más cercano y no con respecto al viewport */
+
+#absolute {
+    position: absolute;
+    top: 50px;
+    left: 200px;
+background-color: var(--color-light);
+color: var(--color-dark);
+
+}
+
+#ancestro {
+    position:absolute;
+    width: 100px;
+    height: 108px;
+    background-color: var(--color-dark);
+    border-color: var(--color-background);
+
+}
+/*nos permite mantener el elemento de manera fija en el viewport
+
+#fixed {
+    left: 350px;
+    top: 500px;
+    position: fixed;
+    background-color: hotpink;
+} */
+
+#chat {
+    /*border: solid var(--color-light) 1px;*/
+    position: fixed;
+    top: 520px;
+    left:370px;
+    width: 3em;
+    height: 3em;
+
+}
+#whatsapp-icon {
+    width: 100%;
+
+}
+
+.display-inline {
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-text-primary);
+    color: var(--color-dark);
+    text-align: center;
+    margin: 2px;
+}
+
+#display-1, #display-2 {
+    display: inline;
+}
+
+.display-block {
+
+    /*display: block;*/
+    display: inline-block;
+    width: 100px;
+    height: 108px;
+    background-color: var(--color-dark);
+    text-align: center;
+    margin: 2px;
+
+}
+
+@media (max-width: 720px) {
+    .display-none {
+        display: none;
+    } 
+}
+
+/*Display flex. Me permite trabajar de manera flexible con elementos anidados dentro de un ancestro, El flexboc se aplica en el container y tiene efecto sobre los hijos.
+Por default, la firección de flex en en filas (row).
+Vamos a poder acceder a diversas propiedades para modificar el comportamiento de los elementos.
+-flex direction: column, column-reverse,row, row-reverse
+-flex-wrap: wrap, nowrap, wrap-reverse
+align-item: start, end, center
+align-self: flex-start, flex-end*/
+
+.container {
+    display:flex;
+    /* flex-direction: row-reverse;*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /*align-items: end;*/
+
+    width: auto;
+    height: 350px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--color-text-secondary);
+
+}
+
+.display-flex {
+    width: 100px;
+    height: 80px;
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+    background-color: var(--color-dark);
+    border-radius: 6px;
+}
+.display-none {
+    display: none;
+
+}  
+
+#item-6 {
+    align-self: center;
+}
+
+/* grid layout
+Elementos de una cuadricula grid: contenedor, items, celdas, area */
+
+.grid {
+    display:grid;
+grid-template-columns: auto auto auto auto;
+grid-template-rows: auto auto auto auto;
+gap: 20px;
+
+padding: 20px;
+}
+
+.display-grid {
+    background-color: var(--color-dark);
+    border-radius: 3px;
+    padding: 20px;
+    text-align: center;
+    border: solid var(--color-light) 1px;
+}
+    .container-1 {
+        display: grid;
+        grid-template-columns: repeat(3,1 fr);
+        grid-template-rows: 1fr 2fr 2fr 1fr;
+        grid-template-areas: 
+        "head head head"
+        "aside section section"
+        "aside article section"
+        "footer footer footer"
+        
+        ;
+
+
+        width: auto;
+        height: 500px;
+        border: solid var(--color-text-primary) 0.7px;
+        text-align: center;
+        margin: 10px;
+        font-size: 18px;
+    }
+    
+    header {
+        background-color:darkviolet;
+        grid-area: head;
+    }
+    
+    nav {
+        background-color:darkslategray;
+        grid-area: nav;
+    }
+    
+    aside {
+        background-color: seagreen;
+        grid-area: aside;
+    }
+    
+    section {
+        background-color: peru;
+        grid-area: section;
+    }
+    
+    article {
+        background-color: tomato;
+        grid-area: article;
+    }
+    
+    footer {
+        background-color: deepskyblue;
+        grid-area: footer;
+    }
